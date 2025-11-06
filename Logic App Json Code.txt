@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "to_email_address": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    }
+  }
+}

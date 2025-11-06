@@ -1,0 +1,16 @@
+pip install databricks-api
+
+////Command to execute the notebook from terminal
+
+python.exe "<location of Docker_ADB_Call.py>" "[{'source_type':'dbfs_delta_Table','table_name':'Customer'}, {'source_type':'sql_server','table_name':'dbo.Employee'}]"
+
+
+
+//Command to build docker Image
+docker build -f Docker -t docker_python_latest .
+
+
+/// Command to execute notebook using Docker Image
+
+docker run docker_python_latest python /usr/app/src/Docker_ADB_Call.py "[{'source_type':'dbfs_delta_Table','table_name':'Customer'}, {'source_type':'sql_server','table_name':'dbo.Employee'}]"
+
